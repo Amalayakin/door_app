@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Your CSS styles here */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Bebas Neue', 'Chakra Petch', 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .head {
+            background-color: #D3BF5A;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .media-div {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .img-con {
+            max-width: 100%;
+        }
+
+        .img-org {
+            width: 100%;
+            height: auto;
+        }
+
+        .vid-aud {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .video-con {
+            position: relative;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+        }
+
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .audio-con {
+            text-align: center;
+        }
+
+        .ctrl-btn {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-allow {
+            background-color: #7CFC00;
+        }
+
+        .btn-decline {
+            background-color: #ff0000;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+        }
+
+        .btn-mic {
+            flex: 1;
+        }
+
+        @media screen and (min-width: 768px) {
+            .media-div {
+                grid-template-columns: 40% 60%;
+            }
+
+            .audio-con {
+                text-align: right;
+            }
+        }
+    </style>
+    <title>door screening app</title>
+</head>
+<body>
+  <div class="main-container">
+    <div class="head">
+        <h1>door authentication app</h1>
+    </div>
+    <div class="media-div">
+        <div class="img-con">
+            <img class="img-org" src="stopwatchbg.avif" alt="Background Image">
+        </div>
+        <div class="vid-aud">
+            <div class="video-con">
+                <iframe src="http://192.168.137.130:8085/stream_simple.html" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+            <div class="audio-con">
+                <button class="btn-mic btn"><i class="fa-solid fa-microphone icon"></i></button>
+            </div>
+        </div>
+    </div>
+       
+    <div class="ctrl-btn">
+        <button class="btn-allow btn">allow</button>
+        <button class="btn-decline btn">decline</button>
+    </div>
+  </div> 
+  <script></script> 
+</body>
+</html>
+
